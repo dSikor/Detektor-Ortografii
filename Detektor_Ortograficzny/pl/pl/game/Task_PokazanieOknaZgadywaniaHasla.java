@@ -2,7 +2,8 @@ package pl.game;
 
 import java.util.TimerTask;
 
-import pl.game.Okno_Do_Zgadywania_Has³a.StanOkna;
+import pl.okienkaWyswietlane.Okno_Do_Zgadywania_Has³a;
+import pl.okienkaWyswietlane.Okno_Do_Zgadywania_Has³a.StanOkna;
 
 public class Task_PokazanieOknaZgadywaniaHasla  extends TimerTask {
 
