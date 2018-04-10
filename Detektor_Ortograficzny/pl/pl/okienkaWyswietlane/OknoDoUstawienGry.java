@@ -64,7 +64,8 @@ public class OknoDoUstawienGry extends JFrame {
 		
 		setLocationRelativeTo(null);
 		
-		contentPane = new Panel_Z_Tlem("tlo.jpg");	
+		//contentPane = new Panel_Z_Tlem("tlo.jpg");	
+		contentPane = new Panel_Z_Tlem("tloOknaUstawienGry_Wyniku.jpg");	
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 				
 		setContentPane(contentPane);
