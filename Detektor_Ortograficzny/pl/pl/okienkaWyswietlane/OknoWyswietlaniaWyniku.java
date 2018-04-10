@@ -78,11 +78,11 @@ public class OknoWyswietlaniaWyniku extends JFrame {
 		
 		if(licz_ZdobytychPunktow==licz_Odpowiedzi)
 		{
-			dodajGrafikê("szczesliwy.jpg",obrazGrafiki,pole2);
+			dodajGrafikê("szczesliwyGracz.jpg",obrazGrafiki,pole2);
 			
 		}else
 		{
-			dodajGrafikê("smutny.jpg",obrazGrafiki,pole2);
+			dodajGrafikê("smutnyGracz.jpg",obrazGrafiki,pole2);
 		}
 		
 		

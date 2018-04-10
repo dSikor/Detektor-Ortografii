@@ -47,7 +47,7 @@ public class Okno_Do_Zgadywania_Has³a extends JFrame {
 	this.setLocationByPlatform(true);
 	this.setLocale(new Locale("pl", "PL"));
 	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	this.setContentPane(new Panel_Z_Tlem("tloNowe.jpg"));
+	this.setContentPane(new Panel_Z_Tlem("tloOknaZgadywaniaHasla.jpg"));
 	
 	this.getContentPane().setLayout(new BorderLayout());
 	this.setTitle("Has³o nr: "+numerHas³a);
