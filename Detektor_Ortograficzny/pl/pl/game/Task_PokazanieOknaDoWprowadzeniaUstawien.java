@@ -2,14 +2,14 @@ package pl.game;
 
 import java.util.TimerTask;
 
-import pl.windowShowOnScreen.FrameToSettingGame;
+import pl.okienkaWyswietlane.OknoDoUstawienGry;
 
 public class Task_PokazanieOknaDoWprowadzeniaUstawien extends TimerTask{
 
-	FrameToSettingGame oknoUstawienGry;
-	GameSetting ustawieniaGry;
+	OknoDoUstawienGry oknoUstawienGry;
+	UstawieniaGry ustawieniaGry;
 
-	public Task_PokazanieOknaDoWprowadzeniaUstawien(GameSetting t) {
+	public Task_PokazanieOknaDoWprowadzeniaUstawien(UstawieniaGry t) {
 		// TODO Auto-generated constructor stub
 		ustawieniaGry=t;
 	}
@@ -20,7 +20,7 @@ public class Task_PokazanieOknaDoWprowadzeniaUstawien extends TimerTask{
 		synchronized(this)
 		{
 		
-		 oknoUstawienGry = new FrameToSettingGame(ustawieniaGry);
+		 oknoUstawienGry = new OknoDoUstawienGry(ustawieniaGry);
 		 
 		 while(oknoUstawienGry.isEverythingSet()==false)
 		 {

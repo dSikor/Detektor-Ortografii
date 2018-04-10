@@ -1,4 +1,4 @@
-package pl.windowShowOnScreen;
+package pl.okienkaWyswietlane;
 
 
 import java.awt.Color;
@@ -39,7 +39,7 @@ public class OknoWyswietlaniaWyniku extends JFrame {
 		this.setLocale(new Locale("pl", "PL"));
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		this.setContentPane(new BackImagePanel("tlo.jpg"));
+		this.setContentPane(new Panel_Z_Tlem("tlo.jpg"));
 		this.getContentPane().setLayout(new FlowLayout());
 		this.setTitle("Wynik Gry");
 		//this.getContentPane().setBackground(new Color(44,255,127));

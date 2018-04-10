@@ -14,7 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import pl.windowShowOnScreen.BackImagePanel;
+import pl.okienkaWyswietlane.Panel_Z_Tlem;
 
 
 public class Okno_Do_Zgadywania_Has³a extends JFrame {
@@ -30,13 +30,13 @@ public class Okno_Do_Zgadywania_Has³a extends JFrame {
 	private JTextField[] polaHasla;
 	private StanOkna stan;
 	
-	private GameSetting ust;
+	private UstawieniaGry ust;
 	
 	
 	public enum StanOkna{ Przejdz_dalej,Statyczny;}
 		
 	
-	public Okno_Do_Zgadywania_Has³a(String haslo, GameSetting t) 
+	public Okno_Do_Zgadywania_Has³a(String haslo, UstawieniaGry t) 
 	{
 	ust=t;
 	stan=StanOkna.Statyczny;			
@@ -47,17 +47,17 @@ public class Okno_Do_Zgadywania_Has³a extends JFrame {
 	this.setLocationByPlatform(true);
 	this.setLocale(new Locale("pl", "PL"));
 	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	this.setContentPane(new BackImagePanel("tloNowe.jpg"));
+	this.setContentPane(new Panel_Z_Tlem("tloNowe.jpg"));
 	
 	this.getContentPane().setLayout(new BorderLayout());
 	this.setTitle("Has³o nr: "+numerHas³a);
 			
-	pole_Z_Literami_Hasla=new BackImagePanel("tloNowe.jpg");
+	pole_Z_Literami_Hasla=new Panel_Z_Tlem("tloNowe.jpg");
 	pole_Z_Literami_Hasla.setLayout(new FlowLayout(FlowLayout.CENTER));
 	
 	addTextEdit(haslo.length(),pole_Z_Literami_Hasla);	
 		
-	pole_Z_Przyciskami=new BackImagePanel("tloNowe.jpg");
+	pole_Z_Przyciskami=new Panel_Z_Tlem("tloNowe.jpg");
 	pole_Z_Przyciskami.setLayout(new FlowLayout(FlowLayout.CENTER));
 		
 	addButton(pole_Z_Przyciskami);	

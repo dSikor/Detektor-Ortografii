@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class GameSetting {
+public class UstawieniaGry {
 
 private String imieGracza;
 private int liczbaHaselZgadywanych;
@@ -21,7 +21,7 @@ private List<String> odpowiedziGracza;
 
 private boolean stanGry;
 	
-public GameSetting(String name, int number, CharSequence regula) {
+public UstawieniaGry(String name, int number, CharSequence regula) {
 
 	imieGracza = name;
 	liczbaHaselZgadywanych=number;

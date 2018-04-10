@@ -1,10 +1,10 @@
-package pl.windowShowOnScreen;
+package pl.okienkaWyswietlane;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import pl.game.GameSetting;
+import pl.game.UstawieniaGry;
 
 import javax.swing.JLabel;
 import javax.imageio.ImageIO;
@@ -37,7 +37,7 @@ import java.util.Arrays;
 import java.util.Locale;
 
 
-public class FrameToSettingGame extends JFrame {
+public class OknoDoUstawienGry extends JFrame {
 
 
 	private static final long serialVersionUID = 1L;
@@ -49,7 +49,7 @@ public class FrameToSettingGame extends JFrame {
 	private BufferedImage image;
 	
 	
-	public FrameToSettingGame(GameSetting g) {
+	public OknoDoUstawienGry(UstawieniaGry g) {
 		
 		setResizable(false);
 		setLocationByPlatform(true);
@@ -64,7 +64,7 @@ public class FrameToSettingGame extends JFrame {
 		
 		setLocationRelativeTo(null);
 		
-		contentPane = new BackImagePanel("tlo.jpg");	
+		contentPane = new Panel_Z_Tlem("tlo.jpg");	
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 				
 		setContentPane(contentPane);

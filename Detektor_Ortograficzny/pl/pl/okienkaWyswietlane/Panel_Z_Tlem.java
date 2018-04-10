@@ -1,4 +1,4 @@
-package pl.windowShowOnScreen;
+package pl.okienkaWyswietlane;
 
 import java.awt.Graphics;
 import java.awt.Image;
@@ -7,13 +7,13 @@ import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
-public class BackImagePanel extends JPanel{
+public class Panel_Z_Tlem extends JPanel{
 
 
 
 	Image bg ;
 
-	public BackImagePanel(String nazwaGrafikiTla) {
+	public Panel_Z_Tlem(String nazwaGrafikiTla) {
 		// TODO Auto-generated constructor stub
 		
 	bg=new ImageIcon(nazwaGrafikiTla).getImage();

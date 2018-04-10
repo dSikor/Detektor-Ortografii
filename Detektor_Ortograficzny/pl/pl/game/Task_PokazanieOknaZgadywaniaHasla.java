@@ -8,10 +8,10 @@ public class Task_PokazanieOknaZgadywaniaHasla  extends TimerTask {
 
 	private Okno_Do_Zgadywania_Has³a Okno_haslo; 
 	private String hasloZgadywane;
-	private GameSetting ust_Gry;
+	private UstawieniaGry ust_Gry;
 	
 	
-	public Task_PokazanieOknaZgadywaniaHasla(String haslo, GameSetting u) {
+	public Task_PokazanieOknaZgadywaniaHasla(String haslo, UstawieniaGry u) {
 		// TODO Auto-generated constructor stub
 		Okno_haslo=null;
 		hasloZgadywane=haslo;			

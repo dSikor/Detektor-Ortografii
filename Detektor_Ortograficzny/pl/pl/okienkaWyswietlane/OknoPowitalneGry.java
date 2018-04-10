@@ -1,4 +1,4 @@
-package pl.windowShowOnScreen;
+package pl.okienkaWyswietlane;
 
 import java.awt.Image;
 

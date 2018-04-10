@@ -2,7 +2,7 @@ package pl.game;
 
 import java.util.TimerTask;
 
-import pl.windowShowOnScreen.OknoWyswietlaniaWyniku;
+import pl.okienkaWyswietlane.OknoWyswietlaniaWyniku;
 
 public class Task_WyswietlenieWyniku extends TimerTask {
 

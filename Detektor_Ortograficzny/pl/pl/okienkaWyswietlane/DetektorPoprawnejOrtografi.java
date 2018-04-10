@@ -1,8 +1,8 @@
-package pl.windowShowOnScreen;
+package pl.okienkaWyswietlane;
 
 
 import java.util.List;
-import pl.game.GameSetting;
+import pl.game.UstawieniaGry;
 import pl.game.Task_PokazanieOknaDoWprowadzeniaUstawien;
 import pl.game.Task_PokazanieOknaZgadywaniaHasla;
 import pl.game.Task_WyswietlenieWyniku;
@@ -24,7 +24,7 @@ public class DetektorPoprawnejOrtografi {
 		
 		//***  Wprowardzenie ustawieñ poczatkowych  ***//
 		
-		GameSetting UstawieniaGry = new GameSetting("",0,"a");
+		UstawieniaGry UstawieniaGry = new UstawieniaGry("",0,"a");
 		Task_PokazanieOknaDoWprowadzeniaUstawien n = new Task_PokazanieOknaDoWprowadzeniaUstawien(UstawieniaGry);
 		n.run();
 		
