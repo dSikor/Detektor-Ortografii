@@ -1,16 +1,19 @@
-package pl.okienkaWyswietlane;
+package pl.innePomocneKlasy;
 
 import java.awt.Graphics;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
-import javax.swing.JComponent;
 import javax.swing.JPanel;
 
 public class Panel_Z_Tlem extends JPanel{
 
-
-
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
 	Image bg ;
 
 	public Panel_Z_Tlem(String nazwaGrafikiTla) {

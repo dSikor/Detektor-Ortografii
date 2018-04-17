@@ -16,6 +16,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
+import pl.innePomocneKlasy.Panel_Z_Tlem;
+
 public class OknoWyswietlaniaWyniku extends JFrame {
 
 	

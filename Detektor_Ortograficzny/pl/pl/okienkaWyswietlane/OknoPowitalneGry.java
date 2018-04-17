@@ -6,6 +6,8 @@ import javax.swing.GroupLayout;
 import javax.swing.JFrame;
 import javax.swing.GroupLayout.Alignment;
 
+import pl.innePomocneKlasy.WyswietlanaGrafika;
+
 
 public class OknoPowitalneGry extends JFrame{
 

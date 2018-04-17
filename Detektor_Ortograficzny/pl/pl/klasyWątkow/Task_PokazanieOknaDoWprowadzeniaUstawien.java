@@ -2,6 +2,7 @@ package pl.klasyW¹tkow;
 
 import java.util.TimerTask;
 
+import pl.glowneKlasyAplikacji.UstawieniaGry;
 import pl.okienkaWyswietlane.OknoDoUstawienGry;
 
 public class Task_PokazanieOknaDoWprowadzeniaUstawien extends TimerTask{

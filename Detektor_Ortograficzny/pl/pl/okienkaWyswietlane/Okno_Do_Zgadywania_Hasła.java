@@ -1,7 +1,6 @@
 package pl.okienkaWyswietlane;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -14,7 +13,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import pl.game.UstawieniaGry;
+import pl.glowneKlasyAplikacji.UstawieniaGry;
+import pl.innePomocneKlasy.Panel_Z_Tlem;
 
 
 public class Okno_Do_Zgadywania_Has³a extends JFrame {

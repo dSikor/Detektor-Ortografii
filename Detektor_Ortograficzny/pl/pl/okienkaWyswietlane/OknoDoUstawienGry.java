@@ -4,7 +4,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import pl.game.UstawieniaGry;
+import pl.glowneKlasyAplikacji.UstawieniaGry;
+import pl.innePomocneKlasy.Panel_Z_Tlem;
 
 import javax.swing.JLabel;
 import javax.imageio.ImageIO;
