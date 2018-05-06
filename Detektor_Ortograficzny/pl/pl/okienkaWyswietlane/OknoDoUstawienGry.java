@@ -8,6 +8,7 @@ import pl.glowneKlasyAplikacji.UstawieniaGry;
 import pl.innePomocneKlasy.Panel_Z_Tlem;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.imageio.ImageIO;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -65,7 +66,6 @@ public class OknoDoUstawienGry extends JFrame {
 		
 		setLocationRelativeTo(null);
 		
-		//contentPane = new Panel_Z_Tlem("tlo.jpg");	
 		contentPane = new Panel_Z_Tlem("tloOknaUstawienGry_Wyniku.jpg");	
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 				
@@ -103,12 +103,26 @@ public class OknoDoUstawienGry extends JFrame {
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				g.setNameOfPlayer(textField_Name.getText());
-				g.setNumberOfPassword((Integer)spinner_NumberOfPassword.getValue());				
-				g.setRegulaOrtograficzna_sekfencja((CharSequence)spinner_Regu³yGramatyczne.getValue());
-						
-				setEverythingSet(true);
 				
+					
+					g.setNameOfPlayer(textField_Name.getText());
+					g.setNumberOfPassword((Integer)spinner_NumberOfPassword.getValue());				
+					g.setRegulaOrtograficzna_sekfencja((CharSequence)spinner_Regu³yGramatyczne.getValue());
+					
+					
+					if(g.getNumberOfPassword()==0 || g.getNameOfPlayer().equals(""))
+					{
+						JOptionPane.showMessageDialog(null,
+							    "Nie poda³eœ swojego imienia i/lub liczby zgadywanych hase³ !!! ",
+							    "Ostrze¿enie",
+							    JOptionPane.WARNING_MESSAGE);
+						setEverythingSet(false);
+						
+					}
+					else
+					{
+						setEverythingSet(true);
+					}				
 			}
 		});
 		
