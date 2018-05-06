@@ -13,6 +13,7 @@ import java.util.Random;
 
 public class UstawieniaGry {
 
+	
 private String imieGracza;
 private int liczbaHaselZgadywanych;
 private List<String> haslaDoZgadniecia;

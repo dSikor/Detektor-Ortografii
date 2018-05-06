@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
@@ -16,24 +15,19 @@ public class WyswietlanaGrafika extends JPanel {
 	private static final long serialVersionUID = -5960357195329625180L;
 	private BufferedImage image;
 	
+	
+	
+	
 	public WyswietlanaGrafika(String titleGrafic) {
 		
 		super();
-		
-		URL adresPliczku = WyswietlanaGrafika.class.getResource("/res/grafika_witam.jpg");
-		System.out.println(adresPliczku.toString());
-		
-		
-		//String workingDir = System.getProperty("user.dir");
-		//System.out.println("Current working directory : " + workingDir);
-		
-		//File imageFile = new File(titleGrafic);
-		
-		File imageFile = new File(adresPliczku.toString());
-		
+			
+		File imageFile = new File(titleGrafic);
 		
 		try {
 			image = ImageIO.read(imageFile);
+			
+		
 		} catch (IOException e) {
 			System.err.println("Blad odczytu obrazka");
 			e.printStackTrace();

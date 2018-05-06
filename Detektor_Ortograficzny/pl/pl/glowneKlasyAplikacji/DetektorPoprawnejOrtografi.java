@@ -6,6 +6,7 @@ import java.util.List;
 import pl.klasyW¹tkow.Task_PokazanieOknaDoWprowadzeniaUstawien;
 import pl.klasyW¹tkow.Task_PokazanieOknaZgadywaniaHasla;
 import pl.klasyW¹tkow.Task_WyswietlenieWyniku;
+import pl.okienkaWyswietlane.OknoDoUstawienGry;
 import pl.okienkaWyswietlane.OknoPowitalneGry;
 
 public class DetektorPoprawnejOrtografi {
