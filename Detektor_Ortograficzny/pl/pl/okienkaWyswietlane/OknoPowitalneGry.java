@@ -1,7 +1,5 @@
 package pl.okienkaWyswietlane;
 
-import java.awt.Image;
-
 import javax.swing.GroupLayout;
 import javax.swing.JFrame;
 import javax.swing.GroupLayout.Alignment;
@@ -52,6 +50,7 @@ public class OknoPowitalneGry extends JFrame{
 		pack();
 		setLocationRelativeTo(null);		
 		setVisible(true);
+		
 		/*
 	 	Wywo³anie w¹tku uœpienia na okreœlony czas.
 		Okno powitalne pojawia siê i jest wyœwietlane przez okreœlon¹ chwilê czasu.
