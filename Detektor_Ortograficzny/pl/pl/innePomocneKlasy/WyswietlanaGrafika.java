@@ -9,32 +9,33 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+/*
+ Klasa dziedzicz¹ca po JPanel do tworzenia obiektu wype³nionego grafik¹.  
+ Grafika wczytywana jest z pliku.   
+*/
+
 public class WyswietlanaGrafika extends JPanel {
 
-
 	private static final long serialVersionUID = -5960357195329625180L;
-	private BufferedImage image;
+	private BufferedImage grafika_bufor;
+
+	// Konstruktor z parametrem nazwaPliku. Nazwa pliku podana z rozszerzeniem (.jpg)   
 	
-	
-	
-	
-	public WyswietlanaGrafika(String titleGrafic) {
+	public WyswietlanaGrafika(String nazwaPliku) {
 		
-		super();
-			
-		File imageFile = new File(titleGrafic);
+		super();			
+		File grafika_Plik = new File(nazwaPliku);
 		
 		try {
-			image = ImageIO.read(imageFile);
-			
-		
+			grafika_bufor = ImageIO.read(grafika_Plik);
+				
 		} catch (IOException e) {
 			System.err.println("Blad odczytu obrazka");
 			e.printStackTrace();
 		}
 		
-		Dimension dimension = new Dimension(image.getWidth(), image.getHeight());
-		setPreferredSize(dimension);
+		Dimension wymiar_Grafiki = new Dimension(grafika_bufor.getWidth(), grafika_bufor.getHeight());
+		setPreferredSize(wymiar_Grafiki);
 				
 	}
 	
@@ -43,7 +44,7 @@ public class WyswietlanaGrafika extends JPanel {
     {
     super.paintComponent(g); 
     
-        g.drawImage(image, 0,0,this);
+        g.drawImage(grafika_bufor, 0,0,this);
     }
 		
 }
