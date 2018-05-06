@@ -52,11 +52,15 @@ public class OknoPowitalneGry extends JFrame{
 		pack();
 		setLocationRelativeTo(null);		
 		setVisible(true);
-		
-	//  Wywo³anie w¹tku uœpienia na okreœlony czas
-	//	Okno powitalne pojawia siê i jest wyœwietlane przez okreœlon¹ chwilê
+		/*
+	 	Wywo³anie w¹tku uœpienia na okreœlony czas.
+		Okno powitalne pojawia siê i jest wyœwietlane przez okreœlon¹ chwilê czasu.
+		Czas zawiera zmienna czasWyswietlania.
+		Wystêpuje mno¿enie przez 1000 (skalowanie jednostek do ms-milisekund) 
+		*/
 		
 		try {
+			
 			Thread.sleep(czasWyswietlania*1000);
 			
 		} catch (InterruptedException e1) {
