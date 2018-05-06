@@ -6,14 +6,13 @@ import javax.swing.GroupLayout;
 import javax.swing.JFrame;
 import javax.swing.GroupLayout.Alignment;
 
-import pl.innePomocneKlasy.WyswietlanaGrafika;
+import pl.innePomocneKlasy.JPanelWype³nionyGrafika;
 
 
 public class OknoPowitalneGry extends JFrame{
 
 	private static final long serialVersionUID = -2266348944736256051L;
-	Image tlo;
-	WyswietlanaGrafika TloFrame;
+	JPanelWype³nionyGrafika jPanelOkna;
 	boolean czyAktywneOkno;
 	
 	
@@ -34,9 +33,9 @@ public class OknoPowitalneGry extends JFrame{
 				.addGap(0, 261, Short.MAX_VALUE)
 		);
 	
-		TloFrame = new WyswietlanaGrafika(fileWithGraphics);
+		jPanelOkna = new JPanelWype³nionyGrafika(fileWithGraphics);
 		setUndecorated(true);		
-		getContentPane().add(TloFrame);
+		getContentPane().add(jPanelOkna);
 		pack();
 		setLocationRelativeTo(null);		
 		setVisible(true);
