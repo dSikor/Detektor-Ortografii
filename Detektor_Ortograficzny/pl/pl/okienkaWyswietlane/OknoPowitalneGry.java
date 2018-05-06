@@ -9,11 +9,22 @@ import javax.swing.GroupLayout.Alignment;
 import pl.innePomocneKlasy.JPanelWype³nionyGrafika;
 
 
+/*
+Klasa dziedzicz¹ca po JFrame do tworzenia obiektu okna powitalnego gry.  
+Wyswietlane na pocz¹tku gry.    
+*/
+
 public class OknoPowitalneGry extends JFrame{
 
 	private static final long serialVersionUID = -2266348944736256051L;
 	JPanelWype³nionyGrafika jPanelOkna;
 	boolean czyAktywneOkno;
+	
+	/*
+	 Konstruktor przyjmujacy 2 parametry: 
+	 - nazwa pliku z grafik¹,
+	 - czas wyswietlania okna powitalnego,
+	*/
 	
 	
 	public OknoPowitalneGry(String fileWithGraphics ,int czasWyswietlania) {
@@ -32,14 +43,18 @@ public class OknoPowitalneGry extends JFrame{
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGap(0, 261, Short.MAX_VALUE)
 		);
-	
+		
 		jPanelOkna = new JPanelWype³nionyGrafika(fileWithGraphics);
-		setUndecorated(true);		
+		setUndecorated(true);	
+		
+		
 		getContentPane().add(jPanelOkna);
 		pack();
 		setLocationRelativeTo(null);		
 		setVisible(true);
 		
+	//  Wywo³anie w¹tku uœpienia na okreœlony czas
+	//	Okno powitalne pojawia siê i jest wyœwietlane przez okreœlon¹ chwilê
 		
 		try {
 			Thread.sleep(czasWyswietlania*1000);
@@ -48,10 +63,6 @@ public class OknoPowitalneGry extends JFrame{
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		
-		//dispose();
-		
-		
 	}
 		
 }
