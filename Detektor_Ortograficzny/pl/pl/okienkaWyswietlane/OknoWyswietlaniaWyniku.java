@@ -41,39 +41,29 @@ public class OknoWyswietlaniaWyniku extends JFrame {
 		this.setLocale(new Locale("pl", "PL"));
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		//this.setContentPane(new Panel_Z_Tlem("tlo.jpg"));
 		this.setContentPane(new Panel_Z_Tlem("tloOknaUstawienGry_Wyniku.jpg"));
 		this.getContentPane().setLayout(new FlowLayout());
 		this.setTitle("Wynik Gry");
-		//this.getContentPane().setBackground(new Color(44,255,127));
+
 		
 		Border loweredbevel=BorderFactory.createLoweredSoftBevelBorder();
 		Border blueline = BorderFactory.createLineBorder(Color.blue);
 		Border compound= BorderFactory.createCompoundBorder(blueline, loweredbevel);
 		
-		pole1=new JPanel(new GridLayout(3,2,15,15));
-		//pole1.setBackground(Color.);
+		pole1=new JPanel(new GridLayout(2,2,15,15));
 		pole1.setBorder(compound);
 		
 		JLabel tekst1=new JLabel("Poprawne odpowiedzi:");
 		JLabel tekst2=new JLabel("B³êdne odpowiedzi:");
-		JLabel tekst3=new JLabel("Liczba odpowiedzi:");
-	
 		
 		JLabel poleTekst1 = new JLabel(Integer.toString(iloscPoprawnychOdpowiedzi));
 		JLabel poleTekst2 = new JLabel(Integer.toString(iloscBlednychOdpowiedzi));
-		JLabel poleTekst3 = new JLabel(Double.toString(liczbaOdpowiedzi));
 	
-		
 		pole1.add(tekst1);
 		pole1.add(poleTekst1);
 		
 		pole1.add(tekst2);
 		pole1.add(poleTekst2);
-		
-		pole1.add(tekst3);
-		pole1.add(poleTekst3);
-		
 			
 		pole2=new JPanel(new GridLayout());
 		pole2.setBackground(Color.WHITE);
