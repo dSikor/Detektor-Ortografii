@@ -43,12 +43,12 @@ public class OknoDoUstawienGry extends JFrame {
 
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
-	private JTextField textField_Name;
-	private JSpinner spinner_NumberOfPassword;
+	private JPanel contentPane_Okno;
+	private JTextField textField_Imie;
+	private JSpinner spinner_LiczbaHasel;
 	private JSpinner spinner_Regu³yGramatyczne;
-	private boolean isEverythingSet;
-	private BufferedImage image;
+	private boolean czyUstawionoWszystkiePola;
+	private BufferedImage buforNaGrafike;
 	
 	
 	public OknoDoUstawienGry(UstawieniaGry g) {
@@ -66,10 +66,10 @@ public class OknoDoUstawienGry extends JFrame {
 		
 		setLocationRelativeTo(null);
 		
-		contentPane = new Panel_Z_Tlem("tloOknaUstawienGry_Wyniku.jpg");	
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane_Okno = new Panel_Z_Tlem("tloOknaUstawienGry_Wyniku.jpg");	
+		contentPane_Okno.setBorder(new EmptyBorder(5, 5, 5, 5));
 				
-		setContentPane(contentPane);
+		setContentPane(contentPane_Okno);
 		
 		
 		JLabel lblImieGracza = new JLabel("Imie Gracza");
@@ -77,14 +77,14 @@ public class OknoDoUstawienGry extends JFrame {
 		lblImieGracza.setForeground(Color.BLACK);
 		lblImieGracza.setHorizontalAlignment(SwingConstants.LEFT);
 		
-		textField_Name = new JTextField();
-		textField_Name.setColumns(10);
+		textField_Imie = new JTextField();
+		textField_Imie.setColumns(10);
 		
 		JLabel lblLiczbaHase = new JLabel("Liczba hase\u0142");
 		lblLiczbaHase.setFont(lblLiczbaHase.getFont().deriveFont(lblLiczbaHase.getFont().getStyle() | Font.BOLD));
 		
-		spinner_NumberOfPassword = new JSpinner();
-		spinner_NumberOfPassword.setModel(new SpinnerNumberModel(0, 0, 15, 1));
+		spinner_LiczbaHasel = new JSpinner();
+		spinner_LiczbaHasel.setModel(new SpinnerNumberModel(0, 0, 15, 1));
 		
 		JLabel lblwiczonaRegula = new JLabel("\u0106wiczona regula");
 		lblwiczonaRegula.setFont(lblImieGracza.getFont().deriveFont(lblImieGracza.getFont().getStyle() | Font.BOLD));
@@ -105,8 +105,8 @@ public class OknoDoUstawienGry extends JFrame {
 				
 				
 					
-					g.setNameOfPlayer(textField_Name.getText());
-					g.setNumberOfPassword((Integer)spinner_NumberOfPassword.getValue());				
+					g.setNameOfPlayer(textField_Imie.getText());
+					g.setNumberOfPassword((Integer)spinner_LiczbaHasel.getValue());				
 					g.setRegulaOrtograficzna_sekfencja((CharSequence)spinner_Regu³yGramatyczne.getValue());
 					
 					boolean brakImieniaGracza=g.getNameOfPlayer().equals("");
@@ -148,7 +148,7 @@ public class OknoDoUstawienGry extends JFrame {
 		panel.setBackground(Color.WHITE);
 		
 							
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		GroupLayout gl_contentPane = new GroupLayout(contentPane_Okno);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
@@ -161,8 +161,8 @@ public class OknoDoUstawienGry extends JFrame {
 								.addComponent(lblwiczonaRegula))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-								.addComponent(textField_Name, GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
-								.addComponent(spinner_NumberOfPassword)
+								.addComponent(textField_Imie, GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+								.addComponent(spinner_LiczbaHasel)
 								.addComponent(spinner_Regu³yGramatyczne))
 							.addGap(18)
 							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE))
@@ -180,11 +180,11 @@ public class OknoDoUstawienGry extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(lblImieGracza)
-								.addComponent(textField_Name, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addComponent(textField_Imie, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 							.addGap(18)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(lblLiczbaHase)
-								.addComponent(spinner_NumberOfPassword, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addComponent(spinner_LiczbaHasel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 							.addGap(17)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(lblwiczonaRegula)
@@ -192,10 +192,10 @@ public class OknoDoUstawienGry extends JFrame {
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(btnOk))
 		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane_Okno.setLayout(gl_contentPane);
 		
 		
-		setGrafic("grafika_ksiazka.jpg",image,panel);
+		setGrafic("grafika_ksiazka.jpg",buforNaGrafike,panel);
 		
 		
 		this.setVisible(true);
@@ -204,12 +204,12 @@ public class OknoDoUstawienGry extends JFrame {
 
 
 	public boolean isEverythingSet() {
-		return isEverythingSet;
+		return czyUstawionoWszystkiePola;
 	}
 
 
 	public void setEverythingSet(boolean isEverythingSet) {
-		this.isEverythingSet = isEverythingSet;
+		this.czyUstawionoWszystkiePola = isEverythingSet;
 	}
 	
 	public void setGrafic(String nazwaGrafiki,BufferedImage img , JPanel p)
