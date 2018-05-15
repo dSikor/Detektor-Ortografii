@@ -109,15 +109,32 @@ public class OknoDoUstawienGry extends JFrame {
 					g.setNumberOfPassword((Integer)spinner_NumberOfPassword.getValue());				
 					g.setRegulaOrtograficzna_sekfencja((CharSequence)spinner_Regu³yGramatyczne.getValue());
 					
+					boolean brakImieniaGracza=g.getNameOfPlayer().equals("");
+					boolean brakUstawieniaLiczbyHasel=(g.getNumberOfPassword()==0);		
+					boolean brakUstawieñGry = (brakImieniaGracza && brakUstawieniaLiczbyHasel);
 					
-					if(g.getNumberOfPassword()==0 || g.getNameOfPlayer().equals(""))
+					
+					if(brakUstawieñGry)
 					{
 						JOptionPane.showMessageDialog(null,
-							    "Nie poda³eœ swojego imienia i/lub liczby zgadywanych hase³ !!! ",
+							    "Nie poda³eœ swojego imienia i liczby zgadywanych hase³ !!! ",
 							    "Ostrze¿enie",
 							    JOptionPane.WARNING_MESSAGE);
 						setEverythingSet(false);
-						
+					}else if(brakImieniaGracza)
+					{
+						JOptionPane.showMessageDialog(null,
+							    "Nie poda³eœ swojego imienia !!! ",
+							    "Ostrze¿enie",
+							    JOptionPane.WARNING_MESSAGE);
+						setEverythingSet(false);
+					}else if(brakUstawieniaLiczbyHasel)
+					{
+						JOptionPane.showMessageDialog(null,
+							    "Nie poda³eœ liczby zgadywanych hase³ !!! ",
+							    "Ostrze¿enie",
+							    JOptionPane.WARNING_MESSAGE);
+						setEverythingSet(false);
 					}
 					else
 					{
